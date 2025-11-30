@@ -1,0 +1,17 @@
+{
+  "name": "idea-garden",
+  "version": "1.0.0",
+  "description": "A place to plant and cultivate your project ideas",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "VITE_API_PATH=$(cat ~/.idea-garden-data-path) vite build && scp -r dist/* $(cat ~/.idea-garden-deploy-target)"
+  },
+  "keywords": ["ideas", "projects", "notes"],
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

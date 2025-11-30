@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Garden</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Idea Garden</h1>
+
+        <!-- Main List View -->
+        <div class="main-view" id="mainView">
+            <div class="add-project">
+                <input type="text" id="projectInput" placeholder="Plant a new idea..." />
+                <button onclick="addProject()">Add Idea</button>
+            </div>
+            <ul class="project-list" id="projectList"></ul>
+        </div>
+
+        <!-- Details View -->
+        <div class="details-view" id="detailsView">
+            <div class="details-header">
+                <button class="back-btn" onclick="showMainView()">← Back</button>
+                <h2 class="details-title" id="detailsTitle" onclick="editTitle()" title="Click to edit title"></h2>
+                <button class="delete-btn" onclick="deleteProject()">Delete</button>
+            </div>
+            <div class="details-content">
+                <textarea id="detailsTextarea" placeholder="Add project details, notes, tasks..."></textarea>
+                <div class="save-status" id="saveStatus"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
